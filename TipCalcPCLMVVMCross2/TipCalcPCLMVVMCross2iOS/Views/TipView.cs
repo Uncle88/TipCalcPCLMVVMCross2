@@ -2,13 +2,12 @@
 
 using UIKit;
 
-namespace TipCalcPCLMVVMCross2iOS
+namespace TipCalcPCLMVVMCross2iOS.Views
 {
-    public partial class ViewController : UIViewController
+    public partial class TipView : UIViewController
     {
-        protected ViewController(IntPtr handle) : base(handle)
+        public TipView() : base("TipView", null)
         {
-            // Note: this .ctor should not contain any initialization logic.
         }
 
         public override void ViewDidLoad()
@@ -24,3 +23,4 @@ namespace TipCalcPCLMVVMCross2iOS
         }
     }
 }
+
