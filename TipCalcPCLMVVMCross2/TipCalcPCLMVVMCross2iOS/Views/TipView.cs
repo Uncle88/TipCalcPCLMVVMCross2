@@ -1,11 +1,18 @@
-﻿using System;
-
+﻿using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
+using TipCalcPCLMVVMCross2.ViewModels;
 using UIKit;
 
 namespace TipCalcPCLMVVMCross2iOS.Views
 {
-    public partial class TipView : UIViewController
+    public partial class TipView : MvxViewController
     {
+        public new TipViewModel ViewModel
+        {
+            get { return (TipViewModel)base.ViewModel; }
+            set { base.ViewModel = value; }
+        }
+
         public TipView() : base("TipView", null)
         {
         }
@@ -13,13 +20,10 @@ namespace TipCalcPCLMVVMCross2iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
-        }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
+            this.CreateBinding(TipLabel).To((TipViewModel vm) => vm.Tip).Apply();
+            this.CreateBinding(SubTotalTextField).To((TipViewModel vm) => vm.SubTotal).Apply();
+            this.CreateBinding(GenerositySlider).To((TipViewModel vm) => vm.Generosity).Apply();
         }
     }
 }

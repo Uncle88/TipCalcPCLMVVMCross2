@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TipView">
             <connections>
+                <outlet property="GenerositySlider" destination="mRt-18-9SM" id="fWb-kY-jaa"/>
+                <outlet property="SubTotalTextField" destination="50Y-4a-fOo" id="JxO-ha-hB1"/>
+                <outlet property="TipLabel" destination="7c3-CX-SZf" id="3cX-eI-dfh"/>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
             </connections>
         </placeholder>
@@ -19,23 +22,23 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWM-1c-kqT">
-                    <rect key="frame" x="25" y="40" width="325" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEh-fb-TVF">
+                    <rect key="frame" x="25" y="35" width="325" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymt-uf-San">
-                    <rect key="frame" x="25" y="91" width="325" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-X5-Yqc">
-                    <rect key="frame" x="23" y="151" width="329" height="31"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mRt-18-9SM">
+                    <rect key="frame" x="23" y="141" width="329" height="31"/>
                 </slider>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WjI-7h-RbQ">
-                    <rect key="frame" x="25" y="221" width="325" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7c3-CX-SZf">
+                    <rect key="frame" x="25" y="201" width="325" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50Y-4a-fOo">
+                    <rect key="frame" x="25" y="78" width="325" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -43,20 +46,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="HWM-1c-kqT" secondAttribute="trailing" constant="25" id="0TS-wy-sEJ"/>
-                <constraint firstItem="HWM-1c-kqT" firstAttribute="top" secondItem="2" secondAttribute="top" constant="40" id="Ah1-n3-jKp"/>
-                <constraint firstItem="WjI-7h-RbQ" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="ByL-8n-OQG"/>
-                <constraint firstItem="HWM-1c-kqT" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="E5l-R4-Jmm"/>
-                <constraint firstAttribute="trailing" secondItem="WjI-7h-RbQ" secondAttribute="trailing" constant="25" id="NvX-Ye-o6o"/>
-                <constraint firstItem="ymt-uf-San" firstAttribute="top" secondItem="HWM-1c-kqT" secondAttribute="bottom" constant="30" id="R8v-E2-irL"/>
-                <constraint firstItem="NvR-X5-Yqc" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="Xu4-di-CID"/>
-                <constraint firstItem="NvR-X5-Yqc" firstAttribute="top" secondItem="ymt-uf-San" secondAttribute="bottom" constant="30" id="ZKh-oA-W84"/>
-                <constraint firstAttribute="trailing" secondItem="ymt-uf-San" secondAttribute="trailing" constant="25" id="ax4-lS-nYi"/>
-                <constraint firstItem="WjI-7h-RbQ" firstAttribute="top" secondItem="NvR-X5-Yqc" secondAttribute="bottom" constant="40" id="eb7-EZ-hAJ"/>
-                <constraint firstItem="ymt-uf-San" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="i2X-aR-4bz"/>
-                <constraint firstAttribute="trailing" secondItem="NvR-X5-Yqc" secondAttribute="trailing" constant="25" id="uOW-TY-xyQ"/>
+                <constraint firstAttribute="trailing" secondItem="pEh-fb-TVF" secondAttribute="trailing" constant="25" id="2SN-sC-hCQ"/>
+                <constraint firstItem="7c3-CX-SZf" firstAttribute="top" secondItem="mRt-18-9SM" secondAttribute="bottom" constant="30" id="Hwr-kO-vkJ"/>
+                <constraint firstItem="pEh-fb-TVF" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="NdN-cU-wcf"/>
+                <constraint firstItem="mRt-18-9SM" firstAttribute="top" secondItem="50Y-4a-fOo" secondAttribute="bottom" constant="30" id="O82-99-rXh"/>
+                <constraint firstItem="7c3-CX-SZf" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="R4R-Er-9tJ"/>
+                <constraint firstItem="50Y-4a-fOo" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="RHY-VY-rOa"/>
+                <constraint firstItem="pEh-fb-TVF" firstAttribute="top" secondItem="2" secondAttribute="top" constant="35" id="TK7-AR-SRq"/>
+                <constraint firstAttribute="trailing" secondItem="mRt-18-9SM" secondAttribute="trailing" constant="25" id="Vq5-DL-8kH"/>
+                <constraint firstAttribute="trailing" secondItem="50Y-4a-fOo" secondAttribute="trailing" constant="25" id="ZfW-N9-PGe"/>
+                <constraint firstAttribute="trailing" secondItem="7c3-CX-SZf" secondAttribute="trailing" constant="25" id="dqj-WB-YQL"/>
+                <constraint firstItem="50Y-4a-fOo" firstAttribute="top" secondItem="pEh-fb-TVF" secondAttribute="bottom" constant="25" id="iej-dA-9kS"/>
+                <constraint firstItem="mRt-18-9SM" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="25" id="rpZ-mM-ZZh"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>
